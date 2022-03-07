@@ -51,6 +51,7 @@ public class EventHubListener<T> : IAsyncDisposable
     {
         var a = Settings;
         var storageUri = new Uri(a.BlobStorageCheckpointUri);
+        _logger.LogInformation("Using storage ", storageUri);
         var storage = new BlobContainerClient(storageUri, new DefaultAzureCredential());
         await storage.CreateIfNotExistsAsync();
 
