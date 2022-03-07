@@ -11,5 +11,5 @@ public class WeatherEventHubSettings : EventHubListenerSettings<WeatherDto>
     public override string EventHubName { get; set; } = "city-temperature";
     public override string EventHubConsumerGroup { get; set; }
 
-    public override bool RegionSpecific { get; set; } = true;
+    public override bool RegionSpecific { get; set; } = false;
 }
