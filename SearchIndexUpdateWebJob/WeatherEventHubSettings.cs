@@ -4,7 +4,7 @@ public class WeatherEventHubSettings : EventHubListenerSettings<WeatherDto>
 {
     public WeatherEventHubSettings(ConvertEventHubWeatherToSearchIndex supportQueueMetricsToSearchIndex, string region)
     {
-        EventHubConsumerGroup = $"index-worker-{region}";
+        EventHubConsumerGroup = $"index-worker";
         ConvertEventCallBack = supportQueueMetricsToSearchIndex.ConvertSupportQueueMetricTimeSeriesToSearchIndex;
     }
 
